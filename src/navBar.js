@@ -4,7 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -52,17 +52,17 @@ const NavBar = () => {
   function selectIcon(text) {
     switch (text) {
       case "home":
-        return <HomeIcon />;
+        return <HomeIcon sx={{ color: "orange" }} />;
       case "about":
-        return <InfoIcon />;
+        return <InfoIcon sx={{ color: "orange" }} />;
       case "services":
-        return <SupportAgentIcon />;
+        return <SupportAgentIcon sx={{ color: "orange" }} />;
       case "portfolio":
-        return <ContactsIcon />;
+        return <ContactsIcon sx={{ color: "orange" }} />;
       case "blog":
-        return <BookIcon />;
+        return <BookIcon sx={{ color: "orange" }} />;
       case "contact":
-        return <PhoneIcon />;
+        return <PhoneIcon sx={{ color: "orange" }} />;
       default:
         return null;
     }
@@ -89,15 +89,27 @@ const NavBar = () => {
   );
 
   const Bar = () => {
-    return lis.map((text)=>{
-      return <BottomNavigationAction label={text.toUpperCase()} sx={{ fontWeight: "bold" }} />;
+    return lis.map((text) => {
+      return (
+        <BottomNavigationAction
+          label={text.toUpperCase()}
+          sx={{ fontWeight: "bold" }}
+        />
+      );
     });
   };
 
   return (
     <AppBar
       position="static"
-      sx={{ bgcolor: "white", color: "black", boxShadow: "0" }}
+      sx={{
+        position: "sticky",
+        top: 0,
+        bgcolor: "white",
+        color: "black",
+        boxShadow: "0",
+        zIndex: 999,
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -109,14 +121,16 @@ const NavBar = () => {
             sx={{
               mr: 2,
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "orange",
-              textDecoration: "none",
+              maxWidthidth: "50px",
+              display: "flex",
+              alignItems: "center",
             }}
           >
-            deneb
+            <img
+              src="/images/logo_1.webp"
+              alt="logo"
+              style={{ maxWidth: "100px", height: "auto" }}
+            />
           </Typography>
 
           <Box>
@@ -169,7 +183,7 @@ const NavBar = () => {
                   }}
                   onClick={toggleDrawer("right", true)}
                 >
-                  <MenuIcon sx={{color: "orange", fontSize: "30px"}} />
+                  <MenuIcon sx={{ color: "orange", fontSize: "30px" }} />
                 </Button>
                 <Drawer
                   anchor={"right"}
