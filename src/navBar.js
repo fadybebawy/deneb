@@ -4,7 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import SubjectIcon from "@mui/icons-material/Subject";
+import MenuIcon from '@mui/icons-material/Menu';
 import Container from "@mui/material/Container";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -88,6 +88,12 @@ const NavBar = () => {
     </Box>
   );
 
+  const Bar = () => {
+    return lis.map((text)=>{
+      return <BottomNavigationAction label={text.toUpperCase()} sx={{ fontWeight: "bold" }} />;
+    });
+  };
+
   return (
     <AppBar
       position="static"
@@ -128,19 +134,7 @@ const NavBar = () => {
                   setValue(newValue);
                 }}
               >
-                <BottomNavigationAction
-                  color="orange"
-                  label="Recents"
-                  sx={{ fontWeight: "bold" }}
-                />
-                <BottomNavigationAction
-                  label="Favorites"
-                  sx={{ fontWeight: "bold" }}
-                />
-                <BottomNavigationAction
-                  label="Nearby"
-                  sx={{ fontWeight: "bold" }}
-                />
+                {Bar()}
               </BottomNavigation>
 
               <Button
@@ -175,7 +169,7 @@ const NavBar = () => {
                   }}
                   onClick={toggleDrawer("right", true)}
                 >
-                  <SubjectIcon />
+                  <MenuIcon sx={{color: "orange", fontSize: "30px"}} />
                 </Button>
                 <Drawer
                   anchor={"right"}
