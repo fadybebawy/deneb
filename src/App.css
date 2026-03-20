@@ -1,6 +1,37 @@
 .main {
-    background-image: url(../public/images/backg.png);
+  background-image: url(../public/images/backg.png);
 }
 .container {
-    margin: 0 30px;
+  margin: 0 30px;
+}
+.css-1kcvi62-MuiBottomNavigationAction-label.Mui-selected {
+  color: orange;
+}
+.css-hzcega-MuiTabs-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+  margin: "5px";
+}
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: white !important;
+  background-color: orange;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(255, 166, 0, 0.4);
+}
+.css-1qltlow-MuiTabs-indicator {
+  display: none;
+}
+@media (width<=767px) {
+  .hello {
+    min-width: 100%;
+  }
+
+  .projectImage {
+    width: 100%;
+  }
 }
