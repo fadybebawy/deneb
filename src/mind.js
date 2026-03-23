@@ -14,10 +14,10 @@ export default function Mind() {
         maxWidth: "970px",
         marginLeft: "auto",
         marginRight: "auto",
-        display: {md: "flex"},
+        display: { md: "flex" },
         alignItems: "center",
         justifyContent: "space-between",
-        margin: {xs: "0 20px 150px", md: "0 auto 150px"}
+        margin: { xs: "0 20px 150px", md: "0 auto 150px" },
       }}
     >
       <Box>

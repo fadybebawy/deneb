@@ -9,6 +9,7 @@ import Pricing from "./Pricing";
 import Blog from "./blog";
 import Contact from "./contact";
 import Mind from "./mind";
+import Footer from "./Footer";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
       <Blog />
       <Contact />
       <Mind />
+      <Footer />
     </>
   );
 }

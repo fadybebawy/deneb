@@ -71,7 +71,7 @@ const NavBar = () => {
       <List>
         {lis.map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton href={`#${text}`}>
               <ListItemIcon>{selectIcon(text)}</ListItemIcon>
               <ListItemText primary={text.toUpperCase()} />
             </ListItemButton>

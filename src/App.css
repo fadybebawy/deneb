@@ -69,4 +69,7 @@
   margin-right: auto;
   width: 100% !important;
 }
+footer .container {
+  display: block !important;
+}
 }
