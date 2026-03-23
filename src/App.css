@@ -1,8 +1,19 @@
 .main {
   background-image: url(../public/images/backg.png);
 }
+:root {
+  scroll-behavior: smooth;
+}
 .container {
-  margin: 0 30px;
+  margin: 0 50px;
+  padding-top: 100px;
+}
+
+@media(width>=900px)
+{
+  .css-1u9o2lj-MuiToolbar-root {
+  margin: 0 26px;
+}
 }
 .css-1kcvi62-MuiBottomNavigationAction-label.Mui-selected {
   color: orange;
@@ -26,7 +37,7 @@
 .css-1qltlow-MuiTabs-indicator {
   display: none;
 }
-@media (width<=767px) {
+@media (width<=899px) {
   .hello {
     min-width: 100%;
   }
@@ -34,4 +45,28 @@
   .projectImage {
     width: 100%;
   }
+
+  .container {
+    margin: 0 20px;
+  }
+  .css-1u9o2lj-MuiToolbar-root {
+  margin: 0 4px;
+}
+#contactBox {
+  display: block;
+}
+.imageDiv {
+  margin: 50px auto !important;
+  width: fit-content;
+}
+.contactImage {
+  max-width: 375px !important;
+}
+.contact input,
+.contact textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100% !important;
+}
 }

@@ -4,17 +4,18 @@ import Typography from "@mui/material/Typography";
 
 export default function Info() {
   return (
-    <section style={{ margin: "100px auto" }}>
+    <section id="about" style={{ margin: "100px auto" }}>
       <Box className="container" sx={{display: {md: "flex"}, gap: "30px", alignItems: "center" }} >
-        <div className="image" style={{ marginBottom: "40px" }}>
-          <img src="/images/about.webp" alt="info_image" />
+        <div className="image" style={{ margin: "0 0px 40px" }}>
+          <img style={{maxWidth: "440px"}} src="/images/about.webp" alt="info_image" />
         </div>
         <div className="info">
           <Typography
             sx={{
               margin: "0px auto 20px",
               color: "#0a2351",
-              fontWeight: "bold",
+              fontWeight: {md: "bold"},
+              wordSpacing: {xs: "-8px", md: "0"}
             }}
             variant="h3"
           >

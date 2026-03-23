@@ -189,7 +189,7 @@ export default function Projects() {
       <Title
         title="Our Latest Projects"
         parag="When unknow printer took a gallery of type and scramblted it to make a type specimen book"
-        id="projects"
+        id="portfolio"
       />
       <Box sx={{ marginTop: "-35px" }}>
         <Tabs

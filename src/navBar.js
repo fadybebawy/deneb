@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -23,14 +23,7 @@ import BookIcon from "@mui/icons-material/Book";
 import PhoneIcon from "@mui/icons-material/Phone";
 const NavBar = () => {
   const [value, setValue] = useState(0);
-  const [lis, setList] = useState([
-    "home",
-    "about",
-    "services",
-    "portfolio",
-    "blog",
-    "contact",
-  ]);
+  const lis = ["home", "services", "about", "portfolio", "blog", "contact"];
   const [state, setState] = useState({
     top: false,
     left: false,
@@ -92,6 +85,7 @@ const NavBar = () => {
     return lis.map((text) => {
       return (
         <BottomNavigationAction
+          href={`#${text}`}
           label={text.toUpperCase()}
           sx={{ fontWeight: "bold" }}
         />
@@ -99,15 +93,27 @@ const NavBar = () => {
     });
   };
 
+  //? shadow on scrroll
+
+  const [scrolled, setScrolled] = useState(0);
+  useEffect(() => {
+    const change = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", change);
+  }, []);
+
   return (
     <AppBar
+      elevation={scrolled ? 2 : 0}
       position="static"
       sx={{
         position: "sticky",
         top: 0,
         bgcolor: "white",
         color: "black",
-        boxShadow: "0",
+        // boxShadow: {scrolled? },
         zIndex: 999,
       }}
     >
@@ -117,7 +123,7 @@ const NavBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#home"
             sx={{
               mr: 2,
               flexGrow: 1,

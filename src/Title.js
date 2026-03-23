@@ -14,7 +14,7 @@ export default function Title({ title, parag, id }) {
         margin: "80px auto"
       }}
     >
-      <Typography variant="h3" sx={{ fontWeight: "600" }}>
+      <Typography variant="h3" sx={{ fontWeight: {md: "600"} }}>
         {title}
       </Typography>
       <Typography
@@ -22,7 +22,7 @@ export default function Title({ title, parag, id }) {
           wordSpacing: "-2px",
           maxWidth: "500px",
           textAlign: "center",
-          mt: "20px",
+          margin: "20px 30px 0",
           fontWeight: "500",
           color: "black",
         }}

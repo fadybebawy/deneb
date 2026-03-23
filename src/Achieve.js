@@ -9,7 +9,8 @@ export default function Achieve() {
             sx={{
               margin: "0px auto 20px",
               color: "#0a2351",
-              fontWeight: "bold",
+              fontWeight: {md: "bold"},
+              wordSpacing: {xs: "-8px", md: "0"}
             }}
             variant="h3"
           >

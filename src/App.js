@@ -6,6 +6,9 @@ import Info from "./Info";
 import Achieve from "./Achieve";
 import Projects from "./Projects";
 import Pricing from "./Pricing";
+import Blog from "./blog";
+import Contact from "./contact";
+import Mind from "./mind";
 function App() {
   return (
     <>
@@ -16,6 +19,9 @@ function App() {
       <Achieve />
       <Projects />
       <Pricing />
+      <Blog />
+      <Contact />
+      <Mind />
     </>
   );
 }

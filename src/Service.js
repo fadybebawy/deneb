@@ -75,7 +75,7 @@ export default function Service() {
   });
 
   return (
-    <section>
+    <section id="services">
       <div
         className="container"
         style={{
@@ -88,7 +88,7 @@ export default function Service() {
         <Title
           title="Our Service"
           parag="When unknow printer took a gallery of type and scramblted it to make a type specimen book"
-          id="service"
+          id="services"
         />
       </div>
       <Box
@@ -99,7 +99,8 @@ export default function Service() {
           alignItems: "center",
           justifyContent: "center",
           gap: "20px",
-          flexWrap: "wrap"
+          flexWrap: "wrap",
+          marginTop: "-30px"
         }}
       >
         {cardList}
